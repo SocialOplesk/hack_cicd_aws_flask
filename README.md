@@ -76,7 +76,8 @@ source venv/bin/actívate
 sudo venv/bin/python3 -m pip install -r requirements.txt
 ```
 
-9. Crear un servicio para la ejecución del servidor en la ruta: /etc/systemd/system/nombre-del-servicio.service | con nano en modo super usuario 
+9. Crear un servicio para la ejecución del servidor en la ruta: /etc/systemd/system/nombre-del-servicio.service
+con nano en modo super usuario.
 ```
 [Unit]
 Description=Nombre de tú Servicio Aquí
