@@ -136,7 +136,12 @@ jobs:
         '
 ```
 
-13. Crea un nuevo endpoint llamado: /api/foo el cuál retorna un "hello foo"
+13. Crea un nuevo endpoint llamado: /api/foo el cuál retorna un "hello foo", abajo el código:
+```
+@app.route('/api/foo', methods=['GET'])
+def foo():
+    return jsonify({"message": "Hello, Foo"})
+```
 
 14. Verificar si el endpoint fue anexado en el ec2 y que se puede consumir, si todo sale bien, es un Éxito 🏆 
 
