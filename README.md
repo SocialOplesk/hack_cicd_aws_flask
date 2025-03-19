@@ -66,7 +66,7 @@ ssh-keygen -t rsa -b 4096 -C "nombre de tú proyecto"
    además otogar permiso al usuario ubuntu al directorio del proyecto:
 ```
 git clone ruta-proyecto
-sudo chown -R ubuntu:ubuntu /your-project
+sudo chown -R ubuntu:ubuntu /nombre_del_directorio_de_tu_proyecto
 ```
 
 8. Dentro del directorio del proyecto crear un entorno virtual y descargar las dependencias:
@@ -84,9 +84,9 @@ After=network.target
 
 [Service]
 User=ubuntu
-WorkingDirectory=/opt/nombre_del_directorio_tu_proyecto
-Environment="PATH=/opt/nombre_del_directorio_tu_proyecto/venv/bin:/usr/bin"
-ExecStart=/opt/nombre_del_directorio_tu_proyecto/venv/bin/python3 /opt/nombre_del_directorio_tu_proyecto/app.py
+WorkingDirectory=/opt/nombre_del_directorio_de_tu_proyecto
+Environment="PATH=/opt/nombre_del_directorio_de_tu_proyecto/venv/bin:/usr/bin"
+ExecStart=/opt/nombre_del_directorio_de_tu_proyecto/venv/bin/python3 /opt/nombre_del_directorio_de_tu_proyecto/app.py
 Restart=always
 
 [Install]
@@ -129,7 +129,7 @@ jobs:
       run: |
         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
         ssh -v -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} '
-          cd /opt/nombre_del_directorio_tu_proyecto &&
+          cd /opt/nombre_del_directorio_de_tu_proyecto &&
           git pull origin main &&
           source venv/bin/activate &&
           sudo venv/bin/python3 -m pip install -r requirements.txt &&
