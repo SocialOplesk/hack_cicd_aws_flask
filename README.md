@@ -56,7 +56,8 @@ sudo apt install python3-pip
 sudo apt install python3.12-venv
 ```
 
-6. El siguiente paso es crear la credencial de acceso rsa para el github actions:
+6. El siguiente paso es crear la credencial de acceso rsa para el github actions,
+   abajo el código y adicional guarda la key.
 ```
 ssh-keygen -t rsa -b 4096 -C "nombre de tú proyecto"
 ```
