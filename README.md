@@ -12,7 +12,7 @@
 ```
 |Hacks | Details | 
 |----------|---------|
-| H-1      | CONECTAR CI/CD INTEGRADO CON EC2 DE AWS PARA UN SERVER DE FLASK |
+| H-1      | CONECTAR CI/CD INTEGRADO CON EC2 DE AWS PARA UN SERVER EN FLASK |
 <br/> 
 
 ## 🏆 H-1 (CI/CD + AWS)
